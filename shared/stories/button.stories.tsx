@@ -6,15 +6,6 @@ export const Component = ({ constrained }: { constrained: boolean }) => (
   <button>Button</button>
 );
 
-Component.args = {
-  constrained: true,
-};
+Component.args = {};
 
-Component.argTypes = {
-  constrained: {
-    control: {
-      type: "select",
-      options: [true, false],
-    },
-  },
-};
+Component.argTypes = {};
