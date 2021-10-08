@@ -7,7 +7,6 @@ export const container = css({
   flexDirection: "column",
   justifyContent: "center",
   alignItems: "center",
-  height: "100vh",
 });
 
 export const main = css({
@@ -51,6 +50,9 @@ export const title = css({
   lineHeight: 1.15,
   fontSize: "4rem",
   ...centerText,
+  "@bp1": {
+    paddingTop: "40px",
+  },
 });
 
 export const description = css({
@@ -103,6 +105,9 @@ export const card = css({
     margin: 0,
     fontSize: "1.25rem",
     lineHeight: 1.5,
+  },
+  "@bp1": {
+    width: "80%",
   },
 });
 
