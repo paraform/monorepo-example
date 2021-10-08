@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
+import useSwr from "swr";
 import {
   container,
   main,
@@ -13,7 +14,14 @@ import {
   code,
 } from "../../shared";
 
+const fetcher = (url: any) => fetch(url).then((res) => res.json());
+
 const Home: NextPage = () => {
+  const { data, error } = useSwr(`/api/users/1`, fetcher);
+
+  if (error) return <div>Failed to load user</div>;
+  if (!data) return <div>Loading...</div>;
+
   return (
     <div className={container()}>
       <Head>
@@ -24,7 +32,7 @@ const Home: NextPage = () => {
 
       <main className={main()}>
         <h1 className={title()}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Welcome to <a href="https://nextjs.org">Next.js! {data.name}</a>
         </h1>
 
         <p className={description()}>
