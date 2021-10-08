@@ -10,15 +10,37 @@ export const {
   createTheme,
   config,
 } = createStitches({
-  theme: {},
+  theme: {
+    colors: {
+      black: "#000000",
+      white: "#FFFFFF",
+      hiContrast: "$black",
+      loContrast: "$white",
+    },
+  },
   media: {
     bp1: "(max-width: 600px)",
   },
   utils: {},
 });
 
+export const lightTheme = createTheme("light", {
+  colors: {
+    ...config.theme.colors,
+  },
+});
+
+export const darkTheme = createTheme("dark", {
+  colors: {
+    hiContrast: "$white",
+    loContrast: "$black",
+  },
+});
+
 export const globalStyles = globalCss({
   "html, body": {
+    background: "$loContrast",
+    color: "$hiContrast",
     padding: 0,
     margin: 0,
     fontFamily:
