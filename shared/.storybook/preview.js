@@ -1,4 +1,4 @@
-import { globalStyles, darkTheme, lightTheme } from "../stitches.config";
+import { globalStyles, darkTheme, lightTheme } from "../src/stitches.config";
 
 globalStyles();
 

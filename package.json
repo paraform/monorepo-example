@@ -1,7 +1,8 @@
 {
   "private": true,
   "scripts": {
-    "dev": "yarn workspaces foreach -p run dev"
+    "dev": "yarn workspaces foreach -p run dev",
+    "rollup": "yarn workspaces foreach -p --include '{shared}' run start "
   },
   "workspaces": [
     "api",

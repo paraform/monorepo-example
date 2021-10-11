@@ -1,4 +1,5 @@
 import { createStitches } from "@stitches/react";
+import type * as Stitches from "@stitches/react";
 
 export const {
   styled,
@@ -54,3 +55,6 @@ export const globalStyles = globalCss({
 
   "*": { boxSizing: "border-box" },
 });
+
+export type CSS = Stitches.CSS<typeof config>;
+export type { Stitches };

@@ -12,7 +12,8 @@ import {
   footer,
   logo,
   code,
-} from "../../shared";
+  Button,
+} from "shared";
 
 const fetcher = (url: any) => fetch(url).then((res) => res.json());
 
@@ -38,7 +39,7 @@ const Home: NextPage = () => {
         <p className={description()}>
           Get started by editing <code className={code()}>pages/index.js</code>
         </p>
-
+        <Button>Press Me</Button>
         <div className={grid()}>
           <a href="https://nextjs.org/docs" className={card()}>
             <h2>Documentation &rarr;</h2>
