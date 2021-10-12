@@ -2,8 +2,8 @@
   "private": true,
   "scripts": {
     "dev:api": "cd apps/api && yarn dev",
-    "dev:app": "cd apps/app && yarn dev",
-    "dev:web": "cd apps/web && yarn dev",
+    "dev:app": "yarn dev:api & cd apps/app && yarn dev",
+    "dev:web": "yarn dev:api & cd apps/web && yarn dev",
     "dev:all": "yarn dev:api & yarn dev:app & yarn dev:web"
   },
   "workspaces": [
