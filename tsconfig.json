@@ -1,9 +1,9 @@
 {
   "references": [
-    { "path": "./api" },
-    { "path": "./app" },
-    { "path": "./shared" },
-    { "path": "./web" }
+    { "path": "./apps/api" },
+    { "path": "./apps/app" },
+    { "path": "./packages/components" },
+    { "path": "./apps/web" }
   ],
   "files": [],
   "include": [],

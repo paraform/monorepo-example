@@ -1,14 +1,17 @@
 {
   "private": true,
   "scripts": {
-    "dev": "yarn workspaces foreach -p run dev",
-    "rollup": "yarn workspaces foreach -p --include '{shared}' run start "
+    "dev:api": "cd apps/api && yarn dev",
+    "dev:app": "cd apps/app && yarn dev",
+    "dev:web": "cd apps/web && yarn dev",
+    "dev:all": "yarn dev:api & yarn dev:app & yarn dev:web"
   },
   "workspaces": [
-    "api",
-    "app",
-    "shared",
-    "web"
+    "apps/*",
+    "packages/*"
   ],
-  "packageManager": "yarn@3.0.2"
+  "packageManager": "yarn@3.0.2",
+  "devDependencies": {
+    "next-transpile-modules": "^8.0.0"
+  }
 }
